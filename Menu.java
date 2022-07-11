@@ -18,10 +18,6 @@ import java.net.URL;
 
 public class Menu extends JFrame {
 	public Menu() {
-//		URL urlIconNotepad = Menu.class.getResource("menu.png");
-//		Image img = Toolkit.getDefaultToolkit().createImage(urlIconNotepad);
-//		this.setIconImage(img);
-		
         setTitle("MENU");
         setSize(970,625);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -57,10 +53,7 @@ public class Menu extends JFrame {
 		
 		
 		class jb1ChoiceListener implements ActionListener {
-	        /**
-	         * Changes the disk number according to the selected number on the combo box.
-	         * @param event The action event.
-	         */
+
 	        @Override
 	        public void actionPerformed(ActionEvent event) {
 	        	MainFrame1 mainFrame = new MainFrame1();
@@ -69,10 +62,7 @@ public class Menu extends JFrame {
 	    } 
 		
 		class jb2ChoiceListener implements ActionListener {
-	        /**
-	         * Changes the disk number according to the selected number on the combo box.
-	         * @param event The action event.
-	         */
+
 	        @Override
 	        public void actionPerformed(ActionEvent event) {
 	        	MainFrame2.getInstance().setVisible(true);

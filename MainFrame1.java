@@ -1,8 +1,4 @@
-/**
- * The main frame establishing the GUI.
- * @author EFE ACER
- * @version 1.0
- */
+
 package allAlgo;
 import java.util.LinkedList;
 import java.math.*;

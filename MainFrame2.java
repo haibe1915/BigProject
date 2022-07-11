@@ -74,7 +74,7 @@ public class MainFrame2 extends JFrame implements ISubscriber{
 		nums=generateList();	
 		rect=new Rectangle(nums);
 		
-		setSize(850,550);
+		setSize(870,550);
 		setResizable(false);
 		setLocationRelativeTo(null);
 		
@@ -131,11 +131,7 @@ public class MainFrame2 extends JFrame implements ISubscriber{
 	}
 	
 
-    private class btmenuChoiceListener implements ActionListener {
-        /**
-         * Changes the disk number according to the selected number on the combo box.
-         * @param event The action event.
-         */
+    private class btmenuChoiceListener implements ActionListener{ 
         @Override
         public void actionPerformed(ActionEvent event) {
         	Menu menu = new Menu();

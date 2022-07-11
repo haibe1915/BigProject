@@ -17,13 +17,14 @@ public class Rectangle extends JPanel{
 	private static int BLUE;
 	private static int GREEN;
 	
-	private static int WIDTH;
+	private static int WIDTH,w1;
 	private static int HEIGHT;
 	private static int PADDING;
 	
 	public void paint(Graphics g) {
 	    super.paint(g);
-	    
+	    g.fillRect(25, 410, 800, 10);
+	    g.setColor(Color.black);
 	    for(int i=0;i<numbers.size();i++) {
 	    	colorRectangle(g,i);
 		    g.fillRect(PADDING+WIDTH*i,410-HEIGHT*numbers.get(i),WIDTH,HEIGHT*numbers.get(i));

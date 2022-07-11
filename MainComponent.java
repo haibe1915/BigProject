@@ -29,21 +29,12 @@ public class MainComponent extends JComponent {
     private static final int STRING_ADJUST = 30;
 	
     
-    //Instance Variabless
     private Rods rods;
     public int x=0,y=0;
     
-    /**
-     * The constructor, it takes a Rods object as an input.
-     * @param rods A Rods object containing the necessary data for the GUI. 
-     */
     public MainComponent(Rods rods) {
         this.rods = rods;
     }
-    
-    /**
-     * Updates the graphics.
-     */
     public void update() {
     	removeAll();
         revalidate();
@@ -51,10 +42,6 @@ public class MainComponent extends JComponent {
         
     }
     
-    /**
-     * Updates the graphics according to the new Rods object given as an input.
-     * @param newRods The new Rods object given as an input.
-     */
     public void updateRods(Rods newRods) {
         rods = newRods;
         removeAll();
@@ -62,10 +49,6 @@ public class MainComponent extends JComponent {
         repaint();
     }
 
-    /**
-     * The method that paints the component using a Graphics object.
-     * @param g The graphics object.
-     */
     public void paintComponentAni(Graphics g) {
         paintRods(g);
         
@@ -104,21 +87,12 @@ public class MainComponent extends JComponent {
         g2D.setStroke(new BasicStroke(THICKNESS));
         g.setColor(Color.DARK_GRAY);
         
-        //Draw the platform 
         g.drawLine(X_START, Y_END, X_END, Y_END);
-        //Draw the rods
         g.drawLine(X_START + SIDE_GAP, Y_END - ROD_LENGTH, X_START + SIDE_GAP, Y_END);
         g.drawLine(X_START + SIDE_GAP + ROD_GAP, Y_END - ROD_LENGTH, X_START + SIDE_GAP + ROD_GAP, Y_END);
         g.drawLine(X_END - SIDE_GAP, Y_END - ROD_LENGTH, X_END - SIDE_GAP, Y_END);
     }
 
-    /**
-     * The method that paints a disk on the specified rod and the specified order.
-     * @param toDraw The Disk object that will be drawn.
-     * @param rodNumber The specific rod that the Disk will be painted on.
-     * @param order The order of the Disk on the specified rod.
-     * @param g The graphics object.
-     */
     private void paintDisk(Disk toDraw, int rodNumber, int order, Graphics g) {
         int diskSize = toDraw.getSize();
         Graphics2D g2D = (Graphics2D) g;
